@@ -1,16 +1,20 @@
 export const initialStore=()=>{
   return{
     message: null,
-    todos: [
+    contacts: [
       {
-        id: 1,
-        title: "Make the bed",
-        background: null,
+        name: "John Doe",
+        phone: "777-666-555",
+        email: "jdoe@gmail.com",
+        address: "123 Main St.",
+        id: 14,
       },
       {
-        id: 2,
-        title: "Do my homework",
-        background: null,
+        name: "Jane Doe",
+        phone: "111-222-3333",
+        email: "janed@gmail.com",
+        address: "123 Elm St.",
+        id: 15,
       }
     ]
   }
