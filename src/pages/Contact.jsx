@@ -1,14 +1,16 @@
-// useEffect will be needed
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ContactCard } from "../components/ContactCard";
 import useGlobalReducer from "../hooks/useGlobalReducer"
 
-// will need to create a fetch.js file for fetches
+import { fetchAllContacts } from "../lib/fetch";
 
 export const Contact = () => {
     const {store, dispatch} = useGlobalReducer();
 
-    // useEffect will go here
+    useEffect(() => {
+        fetchAllContacts(dispatch);
+    }, [])
 
     return (
         <>
